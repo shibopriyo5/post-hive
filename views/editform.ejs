@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post — PostHive</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Edit Post</h2>
+
+        <p><strong>ID:</strong> <%= post.id %></p>
+        <p><strong>Username:</strong> <%= post.username %></p>
+
+        <form method="POST" action="/posts/edit/<%= post.id %>?__method=PATCH">
+            <label for="content">Edit Content</label>
+            <textarea id="content" name="content" rows="5" required><%= post.content %></textarea>
+
+            <button type="submit">Update Post</button>
+        </form>
+
+        <a href="/posts" style="display:block; margin-top:12px; text-align:center;">← Back to all posts</a>
+    </div>
+
+</body>
+</html>

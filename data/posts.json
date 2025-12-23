@@ -1,0 +1,23 @@
+[
+  {
+    "id": "8f50aa82-01b3-44e8-a825-135584ae200b",
+    "username": "dev_alex",
+    "content": "Welcome to PostHive — a tiny posts demo.",
+    "createdAt": "2025-12-22T15:08:23.428Z",
+    "likes": 0
+  },
+  {
+    "id": "5a0042ae-aee6-4c23-bcc1-c9cb74e18513",
+    "username": "sam_dev",
+    "content": "This project is interview-friendly and easy to explain.",
+    "createdAt": "2025-12-22T15:08:23.431Z",
+    "likes": 0
+  },
+  {
+    "id": "438d57a7-d402-4cb1-8973-f331697f666f",
+    "username": "jamie",
+    "content": "Try creating, editing and deleting posts.",
+    "createdAt": "2025-12-22T15:08:23.431Z",
+    "likes": 2
+  }
+]

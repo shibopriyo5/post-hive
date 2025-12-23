@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostHive — Posts</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+    <header style="text-align:center; margin-top:20px;">
+        <h1 class="title">PostHive — Posts</h1>
+        <p style="text-align:center; color:#9aa5b1;">A tiny posts demo </p>
+
+        <form method="GET" action="/posts" style="margin-top:10px;">
+            <input type="text" name="q" value="<%= typeof q !== 'undefined' ? q : '' %>" placeholder="Search by username or content" style="padding:8px; width:280px; border-radius:6px; border:1px solid #ccc;">
+            <button type="submit" style="padding:8px 12px; margin-left:8px;">Search</button>
+            <a href="/posts" style="margin-left:12px; color:#9aa5b1; text-decoration:none;">Clear</a>
+        </form>
+    </header>
+
+    <% for (let i = 0; i < posts.length; i++) { %>
+
+    <div class="post-box">
+
+        <h3><%= posts[i].username %></h3>
+
+        <h4>ID: <%= posts[i].id %></h4>
+
+        <p><%= posts[i].content %></p>
+
+        <small style="color:#9aa5b1;">Posted: <%= posts[i].createdAt ? new Date(posts[i].createdAt).toLocaleString() : 'n/a' %> • Likes: <%= posts[i].likes || 0 %></small>
+
+        <div class="post-links" style="margin-top:8px;">
+            <a href="/posts/<%= posts[i].id %>">View</a>
+            <a href="/posts/editform/<%= posts[i].id %>">Edit</a>
+
+            <form method="POST" action="/posts/like/<%= posts[i].id %>" style="display:inline; margin-left:12px;">
+                <button type="submit" style="padding:6px 10px; background:#2b6cb0; color:white; border-radius:6px; border:none;">Like</button>
+            </form>
+        </div>
+
+        <form method="POST" action="/posts/delete/<%= posts[i].id %>?__method=DELETE" style="margin-top:10px;">
+            <button class="delete-btn">Delete</button>
+        </form>
+
+    </div>
+
+    <% } %>
+
+    <a href="/posts/new" class="create-btn">+ Create New Post</a>
+
+</body>
+</html>

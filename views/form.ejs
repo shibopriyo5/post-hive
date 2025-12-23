@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post — PostHive</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Create a Post</h2>
+
+    <form action="/posts/create" method="POST">
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="your display name">
+
+            <label for="content">Enter your content</label>
+            <textarea id="content" name="content" rows="5" required></textarea>
+
+            <button type="submit">Post</button>
+        </form>
+    </div>
+
+</body>
+</html>
