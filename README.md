@@ -27,12 +27,11 @@ npm install
 2. Start the app:
 
 ```bash
-npm start
+node main.js
 ```
 
 3. Open http://localhost:3000 in your browser.
 
-(For development with auto-reload, install `nodemon` globally and run `npm run dev`).
 
 ## Project structure (key files)
 
