@@ -100,7 +100,7 @@ Contributions are welcome! Please submit issues or pull requests via GitHub. For
 
 ---
 
-## License
+
 
 ## License
 
