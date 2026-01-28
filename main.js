@@ -30,8 +30,7 @@ module.exports = app;const store = require('./lib/store');
 
 store.seedIfEmpty([
     { id: uuidv4(), username: 'dev_alex', content: 'Welcome to PostHive — a tiny posts demo.', createdAt: new Date().toISOString(), likes: 0 },
-    { id: uuidv4(), username: 'sam_dev', content: 'This project is a demo Server-Rendered Posts Application
-.', createdAt: new Date().toISOString(), likes: 0 },
+    { id: uuidv4(), username: 'sam_dev', content: 'This project is a demo Server-Rendered Posts Application.', createdAt: new Date().toISOString(), likes: 0 },
     { id: uuidv4(), username: 'jamie', content: 'Try creating, editing and deleting posts.', createdAt: new Date().toISOString(), likes: 0 },
 ]);
 
